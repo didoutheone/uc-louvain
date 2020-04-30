@@ -3,11 +3,14 @@ import json
 class DbUtils:
 
     def read(file):
-        with open(file) as json_file:
-            return json.load(json_file)
+        outfile = open(file)
+        data = json.load(outfile)
+        outfile.close()
+        return data
 
     def write(file, object):
-        with open(file, 'w+') as outfile:
-            data = json.load(outfile)
-            data['teachers'].append(object)
-            json.dump(data, outfile)
+        data = DbUtils.read(file)
+        outfile = open(file, 'w')
+        data['teachers'].append(object)
+        json.dump(data, outfile)
+        outfile.close()
