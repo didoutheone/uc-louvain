@@ -8,9 +8,9 @@ class DbUtils:
         outfile.close()
         return data
 
-    def write(file, object):
+    def write(file, str, object):
         data = DbUtils.read(file)
         outfile = open(file, 'w')
-        data['teachers'].append(object)
+        data[str].append(object)
         json.dump(data, outfile)
         outfile.close()

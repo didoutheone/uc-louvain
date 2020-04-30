@@ -1,6 +1,6 @@
 class GeneratorRequest:
-    def __init__(self, profilId, courseName, descriptions, volumes):
+    def __init__(self, profilId, courseId, descriptions, volumes):
         self.profilId = profilId
-        self.courseName = courseName
+        self.courseId = courseId
         self.descriptions = descriptions
         self.volumes = volumes

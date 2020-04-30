@@ -1,1 +1,32 @@
-{}
+{
+  "courses": [
+    {
+      "volumes": {
+        "magistraux": 20,
+        "pratique": 5
+      },
+      "id": "LDROI1623",
+      "descriptions": {
+        "acquis": "plus de droit",
+        "contenu": "du droit",
+        "methode_evaluation": "gros exam"
+      },
+      "faculty": "L",
+      "teacher": 1
+    },
+    {
+      "volumes": {
+        "magistraux": 20,
+        "pratique": 5
+      },
+      "id": "LDROI5157",
+      "descriptions": {
+        "acquis": "plus de droit",
+        "contenu": "du droit",
+        "methode_evaluation": "gros exam"
+      },
+      "faculty": "L",
+      "teacher": 1
+    }
+  ]
+}

@@ -1,2 +1,2 @@
-class TeacherCannotCreateCourse:
+class TeacherCannotCreateCourse(BaseException):
     pass
