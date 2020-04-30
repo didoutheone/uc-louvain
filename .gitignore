@@ -1,0 +1,4 @@
+.idea/
+main/__pycache__/
+main/common/dto/__pycache__/
+main/courseGen/use_case/__pycache__/
