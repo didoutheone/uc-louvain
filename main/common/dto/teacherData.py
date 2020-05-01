@@ -1,3 +1,6 @@
+from main.courseGen.model.teacher import Teacher
+
+
 class TeacherData:
     def __init__(self, id, faculty):
         self.id = id
@@ -9,4 +12,7 @@ class TeacherData:
 
     def getId(self):
         return self.id
+
+    def getTeacher(self):
+        return Teacher(self.id, self.faculty)
 

@@ -9,11 +9,11 @@ class TeacherRepository:
     def getTeachers(self):
         return DbUtils.read(self.file_teachers)
 
-    def findTeacherById(self, id):
+    def findTeacherById(self, profilId):
         teachers = self.getTeachers()
         for teacher in teachers['teachers']:
-            if teacher['id'] == id:
-                found = TeacherData(id, teacher['faculty'])
+            if teacher['id'] == profilId:
+                found = TeacherData(profilId, teacher['faculty'])
                 return found
 
     def addTeacher(self, teacher):
@@ -25,12 +25,7 @@ class TeacherRepository:
             else:
                 print("NON")
 
-    def canCreateCourse(self, idCourse, profilId):
-        teacher = self.findTeacherById(profilId)
-        test = idCourse[1:5]
-        if teacher.faculty == idCourse[0]:
-            return True
-        return False
+                #TODO raise erreur
 
     def createData(self, teacher):
         return {"id": teacher.id, "faculty": teacher.faculty}

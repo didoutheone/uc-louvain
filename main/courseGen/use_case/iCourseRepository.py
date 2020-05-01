@@ -2,7 +2,10 @@ from main.courseGen.use_case.courseRepository import CourseRepository
 
 class ICourseRepository:
     def getCourses(self):
-        CourseRepository().getCourses()
+        return CourseRepository().getCourses()
 
     def addCourse(self, course):
-        CourseRepository().addCourse(course)
+        return CourseRepository().addCourse(course)
+
+    def getCourseById(self, profilId):
+        return CourseRepository().getCourseById(profilId)

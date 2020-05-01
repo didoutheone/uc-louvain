@@ -12,5 +12,5 @@ class ITeacherRepository():
     def addTeacher(self, teacher):
         return TeacherRepository().addTeacher(teacher)
 
-    def findTeacherById(self, id):
-        return TeacherRepository().findTeacherById(id)
+    def findTeacherById(self, profilId):
+        return TeacherRepository().findTeacherById(profilId)
