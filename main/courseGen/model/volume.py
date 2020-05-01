@@ -1,7 +1,11 @@
+from main.courseGen.model.exceptions.courseCannotBeCreated import CourseCannotBeCreated
+
+
 class Volume:
 
     def __init__(self, magistraux, pratique):
-        #TODO raise erreur regles métiers
+        if not magistraux or not pratique or magistraux + pratique <= 0 :
+            raise CourseCannotBeCreated
         self.magistraux = magistraux
         self.pratique = pratique
         self.volumes  = {"magistraux" : magistraux,

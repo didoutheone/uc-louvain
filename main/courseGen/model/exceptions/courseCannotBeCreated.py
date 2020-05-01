@@ -1,0 +1,2 @@
+class CourseCannotBeCreated(BaseException):
+    pass

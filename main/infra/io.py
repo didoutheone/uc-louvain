@@ -1,6 +1,6 @@
 import json
 
-class DbUtils:
+class Io:
 
     def read(file):
         outfile = open(file)
@@ -9,7 +9,7 @@ class DbUtils:
         return data
 
     def write(file, str, object):
-        data = DbUtils.read(file)
+        data = Io.read(file)
         outfile = open(file, 'w')
         data[str].append(object)
         json.dump(data, outfile)

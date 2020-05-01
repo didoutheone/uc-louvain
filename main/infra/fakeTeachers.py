@@ -1,7 +1,7 @@
 from main.common.dto.teacherData import TeacherData
 from main.courseGen.model.exceptions.alreadyExistingTeacher import AlreadyExistingTeacher
 from main.courseGen.use_case.teachers import Teachers
-from main.infra.io import DbUtils
+from main.infra.io import Io
 
 
 class FakeTeachers(Teachers):
@@ -9,7 +9,7 @@ class FakeTeachers(Teachers):
     file_teachers = "/home/clementine/Documents/Soat/formation_ddd/uc-louvain/db/teachers"
 
     def getTeachers(self):
-        return DbUtils.read(self.file_teachers)
+        return Io.read(self.file_teachers)
 
     def findTeacherById(self, profilId):
         teachers = self.getTeachers()
@@ -23,7 +23,7 @@ class FakeTeachers(Teachers):
         teachers = self.getTeachers()
         for existingTeacher in teachers['teachers']:
             if existingTeacher['id'] != teacher.id:
-                DbUtils.write(self.file_teachers,'teachers', data)
+                Io.write(self.file_teachers, 'teachers', data)
             else:
                 raise AlreadyExistingTeacher()
 

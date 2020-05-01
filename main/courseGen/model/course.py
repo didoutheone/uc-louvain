@@ -1,11 +1,6 @@
 from main.common.dto.courseData import CourseData
 from main.courseGen.model.exceptions.teacherCannotCreateCourse import TeacherCannotCreateCourse
 from main.courseGen.model.idGenerator import IdGenerator
-
-# titre unique a l'année et obligatoire
-# nb crédit obl et > 0.
-# quadrimestre val Q1 Q2 Q1&Q2
-# cours externe commence par E - indiquer l'institution dans laquelle le cours se déroule
 from main.infra.fakeTeachers import FakeTeachers
 
 #Aggregate Root
@@ -18,6 +13,9 @@ class Course:
         self.volumes = request.volumes
         self.status = "uncreated"
         self.faculty = self.getFaculty()
+
+    def equals(self, course):
+        return self.courseId == course.courseId
 
     def createCourse(self):
         self.courseId = IdGenerator().create_unique_id(self.teacher.faculty)

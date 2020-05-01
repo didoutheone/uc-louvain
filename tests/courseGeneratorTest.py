@@ -1,10 +1,11 @@
 import unittest
 
 from main.courseGen.exposition.displayCourse import DisplayCourse
-from main.courseGen.exposition.generatorRequest import GeneratorRequest
+from main.courseGen.exposition.courseCreationRequest import CourseCreationRequest
 from main.courseGen.model.description import Description
+from main.courseGen.model.exceptions.courseCannotBeCreated import CourseCannotBeCreated
 from main.courseGen.model.volume import Volume
-from main.courseGen.use_case.generateCourse import GenerateCourse
+from main.courseGen.use_case.createCourse import CreateCourse
 from main.infra.fakeCourses import FakeCourses
 
 
@@ -14,12 +15,12 @@ class GenerateCourseTest(unittest.TestCase):
         profilId = 1
         descriptions = Description("du droit", "test2", "gros exam")
         volumes = Volume(20, 5)
-        request = GeneratorRequest(profilId, descriptions, volumes)
+        request = CourseCreationRequest(profilId, descriptions, volumes)
 
-        generator = GenerateCourse(request, FakeCourses())
-        generator.generate()
+        courseCreator = CreateCourse(request, FakeCourses())
+        courseCreator.create()
 
-        self.assertEqual(generator.course.status, "created")
+        self.assertEqual(courseCreator.course.status, "created")
 
     def test_display_course(self):
         courseId = 'LDROI1623'
@@ -28,3 +29,15 @@ class GenerateCourseTest(unittest.TestCase):
         actual = DisplayCourse(courseId).displayCourse()
 
         self.assertEqual(actual, expectedData)
+
+    # def test_should_not_generate_course(self):
+    #     profilId = 1
+    #     descriptions = Description(None, None, None)
+    #     volumes = Volume(None, None)
+    #     request = GeneratorRequest(profilId, descriptions, volumes)
+    #     #
+    #     # generator = GenerateCourse(request, FakeCourses())
+    #     # generator.generate()
+    #
+    #
+    #     self.assertRaises(GeneratorRequest(profilId, descriptions, volumes), CourseCannotBeCreated)
