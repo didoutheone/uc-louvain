@@ -1,4 +1,4 @@
-from main.courseGen.model.exceptions.courseCannotBeCreated import CourseCannotBeCreated
+from main.model.exceptions.courseCannotBeCreated import CourseCannotBeCreated
 
 
 class Volume:

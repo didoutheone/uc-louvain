@@ -1,13 +1,11 @@
 import unittest
 
-from main.courseGen.exposition.displayCourse import DisplayCourse
-from main.courseGen.exposition.courseCreationRequest import CourseCreationRequest
-from main.courseGen.model.description import Description
-from main.courseGen.model.exceptions.courseCannotBeCreated import CourseCannotBeCreated
-from main.courseGen.model.volume import Volume
-from main.courseGen.use_case.createCourse import CreateCourse
+from main.exposition.displayCourse import DisplayCourse
+from main.exposition.courseCreationRequest import CourseCreationRequest
+from main.model.description import Description
+from main.model.volume import Volume
+from main.use_case.createCourse import CreateCourse
 from main.infra.fakeCourses import FakeCourses
-
 
 class GenerateCourseTest(unittest.TestCase):
 

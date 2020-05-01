@@ -1,6 +1,6 @@
 from main.common.events import mailEvent
 from main.common.events.event import Event
-from main.courseGen.model.course import Course
+from main.model.course import Course
 from main.infra.fakeTeachers import FakeTeachers
 
 

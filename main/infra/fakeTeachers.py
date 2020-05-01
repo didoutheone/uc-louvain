@@ -1,6 +1,6 @@
 from main.common.dto.teacherData import TeacherData
-from main.courseGen.model.exceptions.alreadyExistingTeacher import AlreadyExistingTeacher
-from main.courseGen.use_case.teachers import Teachers
+from main.model.exceptions.alreadyExistingTeacher import AlreadyExistingTeacher
+from main.use_case.teachers import Teachers
 from main.infra.config import Config
 from main.infra.io import Io
 

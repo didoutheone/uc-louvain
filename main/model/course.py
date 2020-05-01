@@ -1,6 +1,6 @@
 from main.common.dto.courseData import CourseData
-from main.courseGen.model.exceptions.teacherCannotCreateCourse import TeacherCannotCreateCourse
-from main.courseGen.model.idGenerator import IdGenerator
+from main.model.exceptions.teacherCannotCreateCourse import TeacherCannotCreateCourse
+from main.model.idGenerator import IdGenerator
 from main.infra.fakeTeachers import FakeTeachers
 
 #Aggregate Root

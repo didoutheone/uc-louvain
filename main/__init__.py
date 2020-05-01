@@ -1,13 +1,10 @@
 from main.common.dto.teacherData import TeacherData
-from main.courseGen.exposition.displayCourse import DisplayCourse
-from main.courseGen.exposition.courseCreationRequest import CourseCreationRequest
-from main.courseGen.model.course import Course
-from main.courseGen.model.description import Description
-from main.courseGen.model.idGenerator import IdGenerator
-from main.courseGen.model.volume import Volume
+from main.exposition.courseCreationRequest import CourseCreationRequest
+from main.model.course import Course
+from main.model.description import Description
+from main.model.volume import Volume
 from main.infra.fakeCourses import FakeCourses
-from main.courseGen.use_case.createCourse import CreateCourse
-from main.courseGen.use_case.teachers import Teachers
+from main.use_case.createCourse import CreateCourse
 
 if __name__ == "__main__":
      profilId = 1
