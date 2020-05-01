@@ -1,4 +1,4 @@
-from main.courseGen.model.teacher import Teacher
+from main.model.teacher import Teacher
 
 
 class TeacherData:

@@ -1,7 +1,7 @@
 from main.common.dto.courseData import CourseData
-from main.courseGen.model.description import Description
-from main.courseGen.model.volume import Volume
-from main.courseGen.use_case.courses import Courses
+from main.model.description import Description
+from main.model.volume import Volume
+from main.use_case.courses import Courses
 from main.infra.config import Config
 from main.infra.io import Io
 

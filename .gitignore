@@ -6,3 +6,4 @@ main/courseGen/exposition/__pycache__/
 main/courseGen/model/__pycache__/
 main/courseGen/model/exceptions/__pycache__/
 main/infra/__pycache__/dbUtils.cpython-35.pyc
+main/infra/__pycache__/

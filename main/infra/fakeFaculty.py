@@ -1,4 +1,4 @@
-from main.courseGen.use_case.faculties import Faculties
+from main.use_case.faculties import Faculties
 
 
 class FakeFaculty:
