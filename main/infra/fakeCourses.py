@@ -2,11 +2,12 @@ from main.common.dto.courseData import CourseData
 from main.courseGen.model.description import Description
 from main.courseGen.model.volume import Volume
 from main.courseGen.use_case.courses import Courses
+from main.infra.config import Config
 from main.infra.io import Io
 
 class FakeCourses(Courses):
 
-    file_courses = "/home/clementine/Documents/Soat/formation_ddd/uc-louvain/db/courses"
+    file_courses = Config().file_path_courses
 
     def getCourses(self):
         return Io.read(self.file_courses)
