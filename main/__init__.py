@@ -10,11 +10,11 @@ from main.courseGen.use_case.generateCourse import GenerateCourse
 from main.courseGen.use_case.teachers import Teachers
 
 if __name__ == "__main__":
-    profilId = 1
-    descriptions = Description("du droit", "test2", "gros exam")
-    volumes = Volume(20, 5)
-    request = GeneratorRequest(profilId, descriptions, volumes)
-    #generator = GenerateCourse(request, FakeCourses())
-    #generator.generate()
+    # profilId = 1
+    # descriptions = Description("du droit", "test2", "gros exam")
+    # volumes = Volume(20, 5)
+    # request = GeneratorRequest(profilId, descriptions, volumes)
+    # generator = GenerateCourse(request, FakeCourses())
+    # generator.generate()
     data = DisplayCourse('LDROI1623').displayCourse()
     print(data)
