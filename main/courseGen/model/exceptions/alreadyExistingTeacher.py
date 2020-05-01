@@ -1,0 +1,2 @@
+class AlreadyExistingTeacher(BaseException):
+    pass

@@ -1,10 +1,10 @@
 from main.common.dto.courseData import CourseData
 from main.courseGen.model.description import Description
 from main.courseGen.model.volume import Volume
-from main.courseGen.use_case.iTeacherRepository import ITeacherRepository
-from main.infra.dbUtils import DbUtils
+from main.courseGen.use_case.courses import Courses
+from main.infra.io import DbUtils
 
-class CourseRepository():
+class FakeCourses(Courses):
 
     file_courses = "/home/clementine/Documents/Soat/formation_ddd/uc-louvain/db/courses"
 

@@ -1,12 +1,11 @@
-from main.courseGen.use_case.iCourseRepository import ICourseRepository
-
+from main.infra.fakeCourses import FakeCourses
 
 class DisplayCourse():
     def __init__(self, courseId):
         self.courseId = courseId
 
     def displayCourse(self):
-        course = ICourseRepository().getCourseById(self.courseId)
+        course = FakeCourses().getCourseById(self.courseId)
         data = self.displayData(course)
         return data
 

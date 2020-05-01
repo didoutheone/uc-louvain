@@ -1,8 +1,10 @@
 from main.common.dto.teacherData import TeacherData
-from main.infra.dbUtils import DbUtils
+from main.courseGen.model.exceptions.alreadyExistingTeacher import AlreadyExistingTeacher
+from main.courseGen.use_case.teachers import Teachers
+from main.infra.io import DbUtils
 
 
-class TeacherRepository:
+class FakeTeachers(Teachers):
 
     file_teachers = "/home/clementine/Documents/Soat/formation_ddd/uc-louvain/db/teachers"
 
@@ -23,9 +25,7 @@ class TeacherRepository:
             if existingTeacher['id'] != teacher.id:
                 DbUtils.write(self.file_teachers,'teachers', data)
             else:
-                print("NON")
-
-                #TODO raise erreur
+                raise AlreadyExistingTeacher()
 
     def createData(self, teacher):
         return {"id": teacher.id, "faculty": teacher.faculty}
