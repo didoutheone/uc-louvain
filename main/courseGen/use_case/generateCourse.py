@@ -1,5 +1,5 @@
 from main.courseGen.model.course import Course
-from main.courseGen.use_case.teachers import Teachers
+from main.infra.fakeTeachers import FakeTeachers
 
 
 class GenerateCourse:
@@ -11,7 +11,7 @@ class GenerateCourse:
         self.courseRepository = repository
 
     def generate(self):
-        teacherData = Teachers().findTeacherById(self.request.profilId)
+        teacherData = FakeTeachers().findTeacherById(self.request.profilId)
         self.course = Course(self.request, teacherData)
         self.course = self.course.createCourse()
         self.courseData = self.course.getCourseData()
