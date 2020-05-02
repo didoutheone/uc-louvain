@@ -7,7 +7,6 @@ from main.model.volume import Volume
 from main.use_case.createCourse import CreateCourse
 from main.infra.fakeCourses import FakeCourses
 
-
 class GenerateCourseTest(unittest.TestCase):
 
     def test_generate_course(self):
