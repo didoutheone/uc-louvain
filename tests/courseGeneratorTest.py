@@ -11,8 +11,8 @@ class GenerateCourseTest(unittest.TestCase):
 
     def test_generate_course(self):
         profilId = 1
-        descriptions = Description("du droit", "test2", "gros exam")
-        volumes = Volume(20, 5)
+        descriptions = Description("Introduction au droit", "Code du travail", "TP et examen")
+        volumes = Volume(60, 10)
         request = CourseCreationRequest(profilId, descriptions, volumes)
 
         courseCreator = CreateCourse(request, FakeCourses())
@@ -21,8 +21,8 @@ class GenerateCourseTest(unittest.TestCase):
         self.assertEqual(courseCreator.course.status, "created")
 
     def test_display_course(self):
-        courseId = 'LDROI1623'
-        expectedData = "Id cours : LDROI1623\nId professeur: 1\nDescription du cours :\n\tContenu : du droit\n\tAcquis : plus de droit\n\tMethode d'évaluation : gros exam\nVolumes horaires :\n\tCours magistraux : 20 heures\n\tTravaux pratiques : 5 heures\n"
+        courseId = 'LDROI6775'
+        expectedData = "Id cours : LDROI6775\nId professeur: 1\nDescription du cours :\n\tContenu : Introduction au droit\n\tAcquis : Code du travail\n\tMethode d'évaluation : TP et examen\nVolumes horaires :\n\tCours magistraux : 60 heures\n\tTravaux pratiques : 10 heures\n"
 
         actual = DisplayCourse(courseId).displayCourse()
 

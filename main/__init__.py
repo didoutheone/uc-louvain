@@ -8,8 +8,8 @@ from main.use_case.createCourse import CreateCourse
 
 if __name__ == "__main__":
      profilId = 1
-     descriptions = Description("du droit", "test2", "gros exam")
-     volumes = Volume(0, 0)
+     descriptions = Description("Introduction au droit", "Code du travail", "TP et examen")
+     volumes = Volume(60, 10)
      request = CourseCreationRequest(profilId, descriptions, volumes)
      courseCreator = CreateCourse(request, FakeCourses())
      courseCreator.create()
