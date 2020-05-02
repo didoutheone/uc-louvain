@@ -18,7 +18,7 @@ class Course:
         return self.courseId == course.courseId
 
     def createCourse(self):
-        self.courseId = IdGenerator().create_unique_id(self.teacher.faculty)
+        self.courseId = IdGenerator().create_course_unique_id(self.teacher.faculty)
         if not self.teacher.canCreateCourse(self.courseId):
             raise TeacherCannotCreateCourse()
         self.status = "created"

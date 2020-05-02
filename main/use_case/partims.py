@@ -1,15 +1,15 @@
 import abc
 
-class Courses:
+class Partims:
 
     @abc.abstractmethod
-    def getCourses(self):
+    def getPartims(self):
         pass
 
     @abc.abstractmethod
-    def addCourse(self, course):
+    def addPartim(self, course):
         pass
 
     @abc.abstractmethod
-    def getCourseById(self, courseId):
+    def getPartimById(self, partimId):
         pass

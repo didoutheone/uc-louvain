@@ -1,0 +1,2 @@
+class PartimCannotBeCreatedError(BaseException):
+    pass
