@@ -1,3 +1,4 @@
 class Config():
-    file_path_courses =  "/home/clementine/Documents/Soat/formation_ddd/uc-louvain/db/courses"
-    file_path_teachers = "/home/clementine/Documents/Soat/formation_ddd/uc-louvain/db/teachers"
+    #FIXME
+    file_path_courses =  "Le chemin vers votre projet/uc-louvain/db/courses"
+    file_path_teachers = "Le chemin vers votre projet/uc-louvain/db/teachers"
