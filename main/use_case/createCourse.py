@@ -3,7 +3,7 @@ from main.common.events.event import Event
 from main.model.course import Course
 from main.infra.fakeTeachers import FakeTeachers
 
-
+# Application Service
 class CreateCourse:
 
     def __init__(self, request, repository):

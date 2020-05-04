@@ -1,5 +1,7 @@
 from main.infra.fakeCourses import FakeCourses
 
+# Exposition
+# Viwe
 class DisplayCourse():
     def __init__(self, courseId):
         self.courseId = courseId

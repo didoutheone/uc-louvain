@@ -1,7 +1,7 @@
 import random
 from main.infra.fakeCourses import FakeCourses
 
-
+# Domain Service
 class IdGenerator():
 
     def create_unique_id(self, faculty):

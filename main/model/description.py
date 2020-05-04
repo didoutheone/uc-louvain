@@ -1,5 +1,6 @@
 from main.model.exceptions.courseCannotBeCreated import CourseCannotBeCreated
 
+# VO
 class Description:
     def __init__(self,contenu, acquis, methode_evaluation):
         if not contenu or not acquis or not methode_evaluation:

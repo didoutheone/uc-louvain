@@ -3,7 +3,8 @@ from main.model.exceptions.teacherCannotCreateCourse import TeacherCannotCreateC
 from main.model.idGenerator import IdGenerator
 from main.infra.fakeTeachers import FakeTeachers
 
-#Aggregate Root
+# Aggregate Root
+# Entity
 class Course:
 
     def __init__(self, request, teacherData):
